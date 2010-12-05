@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -90,10 +91,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\Search\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <None Include="Properties\DataSources\GearAlert.Infrastructure.Search.IndexItem.datasource" />
     <None Include="Properties\DataSources\GearAlert.Reporting.Model.Feed.datasource" />
     <None Include="Service References\Reporting\GearAlert.Web.Reporting.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -102,6 +109,13 @@
     <None Include="Service References\Reporting\configuration91.svcinfo" />
     <None Include="Service References\Reporting\configuration.svcinfo" />
     <None Include="Service References\Reporting\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Search\SearchService.disco" />
+    <None Include="Service References\Search\configuration91.svcinfo" />
+    <None Include="Service References\Search\configuration.svcinfo" />
+    <None Include="Service References\Search\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -137,6 +151,19 @@
     <None Include="Service References\Reporting\ReportingService3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\Search\SearchService.wsdl" />
+    <None Include="Service References\Search\SearchService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Search\SearchService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Search\SearchService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Search\SearchService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -157,6 +184,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\Reporting\" />
+    <WCFMetadataStorage Include="Service References\Search\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\Reporting\ReportingService.wsdl" />

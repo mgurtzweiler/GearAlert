@@ -6,11 +6,11 @@ using System.Text;
 namespace GearAlert.Domain.Feeds {
     public class Alert : EntityBase, IMappable
     {
-        protected virtual string Title { get; set; }
-        protected virtual string Summary { get; set; }
-        protected virtual string Url { get; set; }
-        protected virtual string RemoteId { get; set; }
-        protected virtual DateTime Timestamp { get; set; }
+        public virtual string Title { get; protected set; }
+        public virtual string Summary { get; protected set; }
+        public virtual string Url { get; protected set; }
+        public virtual string RemoteId { get; protected set; }
+        public virtual DateTime Timestamp { get; protected set; }
 
         protected Alert() {}
         public static Alert Create(string title, string summary, string url, string remoteId)

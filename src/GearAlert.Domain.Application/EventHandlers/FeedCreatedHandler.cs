@@ -10,7 +10,7 @@ namespace GearAlert.Domain.Application.EventHandlers {
 
         public void Handle(FeedCreated args)
         {
-            Bus.Publish<INewFeedCreatedEvent>(e =>
+            Bus.Publish<NewFeedCreatedEvent>(e =>
             {
                 e.FeedId = args.Feed.Id;
                 e.LandingPageUrl = args.Feed.Information.LandingPageUrl;
@@ -19,4 +19,5 @@ namespace GearAlert.Domain.Application.EventHandlers {
             });
         }
     }
+    //NewAlertAddedToFeed
 }

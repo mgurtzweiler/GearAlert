@@ -4,7 +4,7 @@ using NHibernate;
 using Ninject;
 using NServiceBus;
 
-namespace GearAlert.Services
+namespace GearAlert.Reporting.Application
 {
     public class ReceivingEndpointConfig :
         IConfigureThisEndpoint,

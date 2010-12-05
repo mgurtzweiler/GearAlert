@@ -23,10 +23,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearAlert.Reporting.Applica
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearAlert.Web", "GearAlert.Web\GearAlert.Web.csproj", "{1CA156E7-A08E-4046-9097-B79EF721822B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{4EA198A7-C772-4F9B-8119-95750024FB51}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearAlert.Infrastructure.Search", "GearAlert.Infrastructure.Search\GearAlert.Infrastructure.Search.csproj", "{1B081EBA-C30A-4607-9D40-FF42C737207F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,10 +61,6 @@ Global
 		{1CA156E7-A08E-4046-9097-B79EF721822B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CA156E7-A08E-4046-9097-B79EF721822B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CA156E7-A08E-4046-9097-B79EF721822B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1B081EBA-C30A-4607-9D40-FF42C737207F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1B081EBA-C30A-4607-9D40-FF42C737207F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1B081EBA-C30A-4607-9D40-FF42C737207F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1B081EBA-C30A-4607-9D40-FF42C737207F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +71,5 @@ Global
 		{449EFDDD-9F42-4FAE-8564-91DA6DD9D55F} = {7AA2257B-90B1-4D7F-A320-67F1850B4197}
 		{E17579F2-B7F6-42F6-83EB-0151A2DF8284} = {8EA16763-134F-477F-AED2-7364F1ACF441}
 		{78F58B96-EE90-476D-AAD8-CDC8E9DEB38D} = {8EA16763-134F-477F-AED2-7364F1ACF441}
-		{1B081EBA-C30A-4607-9D40-FF42C737207F} = {4EA198A7-C772-4F9B-8119-95750024FB51}
 	EndGlobalSection
 EndGlobal

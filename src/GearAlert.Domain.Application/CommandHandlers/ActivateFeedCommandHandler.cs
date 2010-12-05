@@ -1,8 +1,10 @@
-﻿using GearAlert.Domain.Feeds;
+﻿using System;
+using GearAlert.Domain.Feeds;
 using GearAlert.Messages.Commands;
 using GearAlert.Messages.Events;
 using NHibernate;
 using NServiceBus;
+using FeedActivated = GearAlert.Messages.Events.FeedActivated;
 
 namespace GearAlert.Domain.Application.CommandHandlers
 {
@@ -20,7 +22,7 @@ namespace GearAlert.Domain.Application.CommandHandlers
             {
                 var existingFeed = Session.Get<Feed>(message.FeedId);
                 existingFeed.Activate();
-                Bus.Publish<IFeedActivated>(e =>
+                Bus.Publish<FeedActivated>(e =>
                                                 {
                                                     e.FeedId = existingFeed.Id;
                                                 });

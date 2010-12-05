@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="65b04e8f-f105-4923-b360-94ad5ad6ee32" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://local.services.gearalert.net/SearchService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SearchService.xsd" MetadataType="Schema" ID="883b4bb3-4e6f-4cdd-8dde-abe805873ab5" SourceId="1" SourceUrl="http://local.services.gearalert.net/SearchService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SearchService1.xsd" MetadataType="Schema" ID="d2bed281-19a4-4c05-a23a-955b98f9946a" SourceId="1" SourceUrl="http://local.services.gearalert.net/SearchService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SearchService.wsdl" MetadataType="Wsdl" ID="a2d6ae2d-7efe-4146-bea9-94d1c6ad907b" SourceId="1" SourceUrl="http://local.services.gearalert.net/SearchService.svc?wsdl" />
+    <MetadataFile FileName="SearchService.disco" MetadataType="Disco" ID="d37d613d-c80a-4648-a525-7a00696f8285" SourceId="1" SourceUrl="http://local.services.gearalert.net/SearchService.svc?disco" />
+    <MetadataFile FileName="SearchService2.xsd" MetadataType="Schema" ID="719b5657-7c2b-4750-b1ac-dfc509a50fa5" SourceId="1" SourceUrl="http://local.services.gearalert.net/SearchService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SearchService3.xsd" MetadataType="Schema" ID="f1c8b88e-8539-45da-99b7-18e0c786dffc" SourceId="1" SourceUrl="http://local.services.gearalert.net/SearchService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
