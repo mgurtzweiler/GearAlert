@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c0b4dd48-b6ca-4551-8131-a97b3f6f6f3a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://local.services.gearalert.net/ReportingService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ReportingService.xsd" MetadataType="Schema" ID="42b42bb4-3600-4ef8-ae2d-0468e6359b8d" SourceId="1" SourceUrl="http://local.services.gearalert.net/ReportingService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ReportingService1.xsd" MetadataType="Schema" ID="8fca5b85-a707-4842-8443-8878034572b1" SourceId="1" SourceUrl="http://local.services.gearalert.net/ReportingService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ReportingService.wsdl" MetadataType="Wsdl" ID="e83743fb-3b75-44e1-a07e-7dcb735764ba" SourceId="1" SourceUrl="http://local.services.gearalert.net/ReportingService.svc?wsdl" />
+    <MetadataFile FileName="ReportingService.disco" MetadataType="Disco" ID="66d1e9b1-e912-4a6b-8add-ec437416bd98" SourceId="1" SourceUrl="http://local.services.gearalert.net/ReportingService.svc?disco" />
+    <MetadataFile FileName="ReportingService2.xsd" MetadataType="Schema" ID="ae650688-b972-4c4b-b84b-cdd4b44372ed" SourceId="1" SourceUrl="http://local.services.gearalert.net/ReportingService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ReportingService3.xsd" MetadataType="Schema" ID="0e46c48c-c657-4526-b270-6c76b53c9ed8" SourceId="1" SourceUrl="http://local.services.gearalert.net/ReportingService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

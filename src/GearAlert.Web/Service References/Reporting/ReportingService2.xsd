@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/GearAlert.Reporting.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GearAlert.Reporting.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://local.services.gearalert.net/ReportingService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfFeed">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Feed" nillable="true" type="tns:Feed" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFeed" nillable="true" type="tns:ArrayOfFeed" />
+  <xs:complexType name="Feed">
+    <xs:sequence>
+      <xs:element name="_x003C_Id_x003E_k__BackingField" type="ser:guid" />
+      <xs:element name="_x003C_IsActive_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_LandingPageUrl_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Url_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Feed" nillable="true" type="tns:Feed" />
+</xs:schema>

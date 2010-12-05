@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{584CDEBB-825B-4804-B8C5-790B34156B47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Messages", "Messages", "{7AA2257B-90B1-4D7F-A320-67F1850B4197}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reporting", "Reporting", "{8EA16763-134F-477F-AED2-7364F1ACF441}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearAlert.Messages", "GearAlert.Messages\GearAlert.Messages.csproj", "{449EFDDD-9F42-4FAE-8564-91DA6DD9D55F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearAlert.Domain", "GearAlert.Domain\GearAlert.Domain.csproj", "{04CFE0A8-1BE8-47F5-B392-019A964AD59C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearAlert.Services", "GearAlert.Services\GearAlert.Services.csproj", "{61CEF1E6-86B8-48A0-87B4-882681460506}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearAlert.Domain.Application", "GearAlert.Domain.Application\GearAlert.Domain.Application.csproj", "{01240212-6457-4554-A62C-D11E6D2AC7AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearAlert.Configuration", "GearAlert.Configuration\GearAlert.Configuration.csproj", "{6EAD7BB6-7A24-49A7-96CB-F184B14EE911}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearAlert.Reporting", "GearAlert.Reporting\GearAlert.Reporting.csproj", "{E17579F2-B7F6-42F6-83EB-0151A2DF8284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearAlert.Reporting.Application", "GearAlert.Reporting.Application\GearAlert.Reporting.Application.csproj", "{78F58B96-EE90-476D-AAD8-CDC8E9DEB38D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GearAlert.Web", "GearAlert.Web\GearAlert.Web.csproj", "{1CA156E7-A08E-4046-9097-B79EF721822B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{449EFDDD-9F42-4FAE-8564-91DA6DD9D55F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{449EFDDD-9F42-4FAE-8564-91DA6DD9D55F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{449EFDDD-9F42-4FAE-8564-91DA6DD9D55F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{449EFDDD-9F42-4FAE-8564-91DA6DD9D55F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04CFE0A8-1BE8-47F5-B392-019A964AD59C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04CFE0A8-1BE8-47F5-B392-019A964AD59C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04CFE0A8-1BE8-47F5-B392-019A964AD59C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04CFE0A8-1BE8-47F5-B392-019A964AD59C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61CEF1E6-86B8-48A0-87B4-882681460506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61CEF1E6-86B8-48A0-87B4-882681460506}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61CEF1E6-86B8-48A0-87B4-882681460506}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61CEF1E6-86B8-48A0-87B4-882681460506}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01240212-6457-4554-A62C-D11E6D2AC7AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01240212-6457-4554-A62C-D11E6D2AC7AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01240212-6457-4554-A62C-D11E6D2AC7AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01240212-6457-4554-A62C-D11E6D2AC7AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EAD7BB6-7A24-49A7-96CB-F184B14EE911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EAD7BB6-7A24-49A7-96CB-F184B14EE911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EAD7BB6-7A24-49A7-96CB-F184B14EE911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EAD7BB6-7A24-49A7-96CB-F184B14EE911}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E17579F2-B7F6-42F6-83EB-0151A2DF8284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E17579F2-B7F6-42F6-83EB-0151A2DF8284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E17579F2-B7F6-42F6-83EB-0151A2DF8284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E17579F2-B7F6-42F6-83EB-0151A2DF8284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78F58B96-EE90-476D-AAD8-CDC8E9DEB38D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78F58B96-EE90-476D-AAD8-CDC8E9DEB38D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78F58B96-EE90-476D-AAD8-CDC8E9DEB38D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78F58B96-EE90-476D-AAD8-CDC8E9DEB38D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CA156E7-A08E-4046-9097-B79EF721822B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CA156E7-A08E-4046-9097-B79EF721822B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CA156E7-A08E-4046-9097-B79EF721822B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CA156E7-A08E-4046-9097-B79EF721822B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{04CFE0A8-1BE8-47F5-B392-019A964AD59C} = {584CDEBB-825B-4804-B8C5-790B34156B47}
+		{01240212-6457-4554-A62C-D11E6D2AC7AE} = {584CDEBB-825B-4804-B8C5-790B34156B47}
+		{449EFDDD-9F42-4FAE-8564-91DA6DD9D55F} = {7AA2257B-90B1-4D7F-A320-67F1850B4197}
+		{E17579F2-B7F6-42F6-83EB-0151A2DF8284} = {8EA16763-134F-477F-AED2-7364F1ACF441}
+		{78F58B96-EE90-476D-AAD8-CDC8E9DEB38D} = {8EA16763-134F-477F-AED2-7364F1ACF441}
+	EndGlobalSection
+EndGlobal
