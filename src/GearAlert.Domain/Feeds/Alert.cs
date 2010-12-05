@@ -13,19 +13,16 @@ namespace GearAlert.Domain.Feeds {
         protected virtual DateTime Timestamp { get; set; }
 
         protected Alert() {}
-        public Alert(string title, string summary, string url, string remoteId)
+        public static Alert Create(string title, string summary, string url, string remoteId)
         {
-            Title = title;
-            Url = url;
-            Summary = summary;
-            RemoteId = remoteId;
-            Timestamp = DateTime.Now;
-            DomainEvents.Raise(new AlertCreated { Alert = this});
+            return new Alert
+                       {
+                           Title = title,
+                           Url = url,
+                           Summary = summary,
+                           RemoteId = remoteId,
+                           Timestamp = DateTime.Now
+                       };
         }
-    }
-
-    public class AlertCreated : IDomainEvent
-    {
-        public Alert Alert {get;set;}
     }
 }

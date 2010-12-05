@@ -19,7 +19,7 @@ namespace GearAlert.Domain.Application.CommandHandlers
             using (var tx = Session.BeginTransaction())
             {
                 var existingFeed = Session.Get<Feed>(message.FeedId);
-                existingFeed.MarkFeedAsActive();
+                existingFeed.Activate();
                 Bus.Publish<IFeedActivated>(e =>
                                                 {
                                                     e.FeedId = existingFeed.Id;

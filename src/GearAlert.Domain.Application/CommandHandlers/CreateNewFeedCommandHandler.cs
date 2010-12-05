@@ -10,7 +10,7 @@ namespace GearAlert.Services.CommandHandlers {
         public ISession Session { get; set; }
 
         public void Handle(CreateNewFeedCommand message) {
-            var feed = new Feed(message.Name, message.Url, message.LandingUrl);
+            var feed = Feed.Create(message.Name, message.Url, message.LandingUrl);
             Session.Save(feed);
         }
     }
