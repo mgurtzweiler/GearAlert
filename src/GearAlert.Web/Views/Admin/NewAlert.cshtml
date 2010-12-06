@@ -1,0 +1,17 @@
+﻿@{
+    View.Title = "NewAlert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Createing new alert for @Model.Name</h2>
+<form action="/admin/CreateNewAlert" method="post">
+<label for="name">Title</label><input type="text" name="Title" /><br />
+<label for="name">Url</label><input type="text" name="Url" /><br />
+<label for="RemoteId">RemoteId</label><input type="text" name="RemoteId" /><br />
+<label for="Summary">Summary</label>
+<br /><textarea name="Summary" ></textarea><br />
+
+<input type="hidden" name="feedId" value="@Model.Id" />
+<input type="submit" />
+</form>
+</div>

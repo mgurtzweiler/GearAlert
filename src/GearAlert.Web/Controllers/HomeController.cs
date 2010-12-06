@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
 using GearAlert.Messages.Commands;
-using GearAlert.Web.Models.Home;
+using GearAlert.Web.Models.Admin;
 using NServiceBus;
 
 namespace GearAlert.Web.Controllers
@@ -21,18 +21,9 @@ namespace GearAlert.Web.Controllers
 
         public ActionResult Index()
         {
-            var data = new Reporting.ReportingServiceClient().GetAllFeeds();
-            return View(data);
+           
+            return View();
         }
 
-        public ActionResult New(AddNewFeedInput index)
-        {
-            if(ModelState.IsValid)
-            {
-                var command = Mapper.Map<AddNewFeedInput, CreateNewFeedCommand>(index);
-                Bus.Send(command);
-            }
-            return RedirectToAction("Index");
-        }
     }
 }

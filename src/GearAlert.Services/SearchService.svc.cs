@@ -14,7 +14,7 @@ namespace GearAlert.Services {
 
         public IList<IndexItem> Query(string query)
         {
-            var index = new KeeperOfTheIndex();
+            var index = new SearchIndex();
             return index.QueryIndex(query).ToList();
         }
     }

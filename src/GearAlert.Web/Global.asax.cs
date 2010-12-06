@@ -6,7 +6,9 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using AutoMapper;
 using GearAlert.Messages.Commands;
-using GearAlert.Web.Models.Home;
+using GearAlert.Web.Helpers;
+using GearAlert.Web.Models.Admin;
+using GearAlert.Web.Models.Pubsub;
 using Ninject;
 using Ninject.Web.Mvc;
 using NServiceBus;
@@ -38,8 +40,15 @@ namespace GearAlert.Web {
             AreaRegistration.RegisterAllAreas();
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            ModelBinders.Binders[typeof(HubChallengeInputModel)] = new HubChallengeInputModelBinder();
+
             Mapper.CreateMap<AddNewFeedInput, CreateNewFeedCommand>();
+            Mapper.CreateMap<ActivateFeedInput, ActivateFeedCommand>();
+            Mapper.CreateMap<DeactivateFeedInput, DeactivateFeedCommand>();
+            Mapper.CreateMap<CreateNewAlertInput, RegisterNewAlertCommand>();
             Mapper.AssertConfigurationIsValid();
+
             base.OnApplicationStarted();
         }
 

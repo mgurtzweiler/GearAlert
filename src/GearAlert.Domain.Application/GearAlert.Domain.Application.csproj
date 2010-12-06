@@ -75,8 +75,11 @@
   <ItemGroup>
     <Compile Include="CommandHandlers\ActivateFeedCommandHandler.cs" />
     <Compile Include="CommandHandlers\CreateNewFeedCommandHandler.cs" />
+    <Compile Include="CommandHandlers\CreateNewSubscriptionCommandHandler.cs" />
+    <Compile Include="CommandHandlers\DeactivateFeedCommandHandler.cs" />
     <Compile Include="CommandHandlers\RegisterNewAlertCommandHandler.cs" />
-    <Compile Include="EventHandlers\FeedCreatedHandler.cs" />
+    <Compile Include="EventHandlers\FeedActivatedHandler.cs" />
+    <Compile Include="EventHandlers\FeedDeactivatedHandler.cs" />
     <Compile Include="EventHandlers\NewAlertAddedToFeedHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReceivingEndpointConfig.cs" />

@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace GearAlert.Domain.Feeds {
-    public class Feed : BaseAggregateRoot, IMappable
+    public class Feed : BaseAggregateRoot
     {
         public virtual FeedInformation Information { get; protected set; }
         protected virtual IList<Alert> Alerts { get; set; }
@@ -19,7 +20,6 @@ namespace GearAlert.Domain.Feeds {
                            {
                                Information = FeedInformation.Create(name, url, landingPageUrl)
                            };
-            DomainEvents.Raise(new FeedCreated() { Feed = feed });
             return feed;
         }
 
@@ -28,6 +28,12 @@ namespace GearAlert.Domain.Feeds {
             Information.MarkFeedAsActive();
             DomainEvents.Raise(new FeedActivated {Feed = this});
         }
+
+        public virtual void Deactivate() {
+            Information.MarkAsDeactivated();
+            DomainEvents.Raise(new FeedDeactivated { Feed = this });
+        }
+
 
         public virtual void ChangeFeedName(string newFeedName)
         {
@@ -84,6 +90,10 @@ namespace GearAlert.Domain.Feeds {
 
     public class FeedActivated : IDomainEvent
     {
+        public Feed Feed { get; set; }
+    }
+
+    public class FeedDeactivated : IDomainEvent {
         public Feed Feed { get; set; }
     }
 

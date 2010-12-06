@@ -4,16 +4,4 @@
 }
 
 <h2>Index</h2>
-<div>
-@foreach (var feed in Model) {
-  <dd>@feed.Id</dd><dl>@feed.Name</dl> 
-}
-</div>
-<div>
-<form action="/home/new" method="post">
-<label for="name">Name</label><input type="text" name="name" /><br />
-<label for="url">Url</label><input type="text" name="url" /><br />
-<label for="LandingUrl">Landing Page Url</label><input type="text" name="landingUrl" /><br />
-<input type="submit" />
-</form>
-</div>
+@Html.ActionLink("Admin", "Index", "Admin")

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 namespace GearAlert.Domain.Feeds {
-    public class Alert : EntityBase, IMappable
+    public class Alert : EntityBase, IAutoMappable
     {
         public virtual string Title { get; protected set; }
         public virtual string Summary { get; protected set; }

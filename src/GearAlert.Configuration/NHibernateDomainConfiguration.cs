@@ -1,10 +1,12 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using FluentNHibernate;
 using FluentNHibernate.Automapping;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using FluentNHibernate.Conventions;
 using FluentNHibernate.Conventions.Instances;
+using FluentNHibernate.Mapping;
 using GearAlert.Domain;
 using GearAlert.Domain.Feeds;
 using NHibernate;
@@ -16,16 +18,21 @@ namespace GearAlert.Configuration
         private ISessionFactory SessionFactory;
         private string SchemaPath;
 
-        public NHibernateDomainConfiguration Configure(string connectionString, string siteRoot) {
+        public NHibernateDomainConfiguration Configure(string connectionString, string siteRoot)
+        {
             SchemaPath = siteRoot;
             SessionFactory = Fluently.Configure()
                 .Database(MsSqlConfiguration.MsSql2008.ConnectionString(x => x.Is(connectionString))
                               .ProxyFactoryFactory(
                                   "NHibernate.ByteCode.Castle.ProxyFactoryFactory, NHibernate.ByteCode.Castle"))
-                .Mappings(m => m.AutoMappings.Add(
-                    AutoMap.AssemblyOf<Feed>(new CustomMappingConfiguration())
-                        .Conventions.AddFromAssemblyOf<PrimaryKeyGeneratorConvention>())
-                                   .ExportTo(SchemaPath))
+                .Mappings(m =>
+                              {
+                                  m.FluentMappings.AddFromAssemblyOf<FeedMapping>();
+                                  m.AutoMappings.Add(
+                                      AutoMap.AssemblyOf<Feed>(new CustomMappingConfiguration()).Conventions.
+                                          AddFromAssemblyOf<PrimaryKeyGeneratorConvention>()).ExportTo(SchemaPath);
+
+                              })
                 .ExposeConfiguration(BuildSchema)
                 .BuildSessionFactory();
             return this;
@@ -42,6 +49,22 @@ namespace GearAlert.Configuration
             return SessionFactory.OpenSession();
         }
 
+        public class FeedMapping : ClassMap<Feed> {
+            public FeedMapping()
+            {
+                Id(x => x.Id).Unique().GeneratedBy.Assigned();
+                Component(x => x.Information, m =>
+                {
+                    m.Map(x => x.Name);
+                    m.Map(x => x.Url);
+                    m.Map(x => x.LandingPageUrl);
+                    m.Map(x => x.IsActive);
+                });
+                HasMany<Alert>(Reveal.Member<Feed>("Alerts"));
+                HasMany<Subscription>(Reveal.Member<Feed>("Subscriptions"));
+            }
+        }
+
         public class CustomMappingConfiguration : DefaultAutomappingConfiguration {
 
             public override bool ShouldMap(Member member) {
@@ -50,7 +73,7 @@ namespace GearAlert.Configuration
 
             public override bool ShouldMap(System.Type type)
             {
-                return !type.IsAbstract && type.GetInterface("IMappable") != null;
+                return !type.IsAbstract && type.GetInterface("IAutoMappable") != null;
             }
         }
 

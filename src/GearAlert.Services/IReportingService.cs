@@ -16,6 +16,9 @@ namespace GearAlert.Services {
         IList<Feed> GetAllFeeds();
 
         [OperationContract]
+        Feed GetFeed(Guid feedId);
+
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here

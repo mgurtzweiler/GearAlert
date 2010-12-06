@@ -27,13 +27,26 @@ namespace GearAlert.Domain.Application
         }
         protected IKernel CreateKernel() {
             var kernel = new StandardKernel();
-            kernel.Bind<IHandles<FeedCreated>>().To<FeedCreatedHandler>();
+            ScanAndWireUp(kernel);
             kernel.Bind<ISession>().ToMethod(m =>
                                              new NHibernateDomainConfiguration().OpenSession(
                                                  ConfigurationSettings.AppSettings["connectionString"],
                                                  "./NHibernate")).InThreadScope();
             DomainEvents.Container = kernel;
             return kernel;
+        }
+
+        public void ScanAndWireUp(IKernel kernel)
+        {
+            var assembly = GetType().Assembly;
+            foreach(var type in assembly.GetTypes())
+            {
+                var handlesType = type.GetInterface("IHandles`1");
+                if (handlesType != null)
+                {
+                    kernel.Bind(handlesType).To(type);
+                }
+            }
         }
     }
 

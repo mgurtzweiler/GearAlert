@@ -49,12 +49,12 @@
     <Compile Include="Feeds\Feed.cs" />
     <Compile Include="Feeds\FeedInformation.cs" />
     <Compile Include="Feeds\FeedNameNullOrEmptyException.cs" />
-    <Compile Include="Feeds\SearchTerm.cs" />
     <Compile Include="Feeds\Subscriber.cs" />
     <Compile Include="Feeds\Subscription.cs" />
+    <Compile Include="GuidGenerator.cs" />
     <Compile Include="IDomainEvent.cs" />
     <Compile Include="IHandles.cs" />
-    <Compile Include="IMappable.cs" />
+    <Compile Include="IAutoMappable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

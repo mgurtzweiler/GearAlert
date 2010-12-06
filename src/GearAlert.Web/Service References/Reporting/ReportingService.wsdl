@@ -14,6 +14,12 @@
   <wsdl:message name="IReportingService_GetAllFeeds_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllFeedsResponse" />
   </wsdl:message>
+  <wsdl:message name="IReportingService_GetFeed_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeed" />
+  </wsdl:message>
+  <wsdl:message name="IReportingService_GetFeed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeedResponse" />
+  </wsdl:message>
   <wsdl:message name="IReportingService_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
   </wsdl:message>
@@ -25,6 +31,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IReportingService/GetAllFeeds" message="tns:IReportingService_GetAllFeeds_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IReportingService/GetAllFeedsResponse" message="tns:IReportingService_GetAllFeeds_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetFeed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportingService/GetFeed" message="tns:IReportingService_GetFeed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportingService/GetFeedResponse" message="tns:IReportingService_GetFeed_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IReportingService/GetDataUsingDataContract" message="tns:IReportingService_GetDataUsingDataContract_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IReportingService/GetDataUsingDataContractResponse" message="tns:IReportingService_GetDataUsingDataContract_OutputMessage" />
@@ -34,6 +44,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetAllFeeds">
       <soap:operation soapAction="http://tempuri.org/IReportingService/GetAllFeeds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeed">
+      <soap:operation soapAction="http://tempuri.org/IReportingService/GetFeed" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

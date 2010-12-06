@@ -7,5 +7,4 @@ dist
 *resharper*
 *.user
 *.cache
-lib/Ninject/*.zip
-lib/Ninject/*/**
+App_Data

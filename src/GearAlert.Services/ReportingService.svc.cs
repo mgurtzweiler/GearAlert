@@ -23,6 +23,11 @@ namespace GearAlert.Services {
             return Session.QueryOver<Feed>().List();
         }
 
+        public Feed GetFeed(Guid feedId)
+        {
+            return Session.Get<Feed>(feedId);
+        }
+
         public CompositeType GetDataUsingDataContract(CompositeType composite) {
             if (composite == null) {
                 throw new ArgumentNullException("composite");

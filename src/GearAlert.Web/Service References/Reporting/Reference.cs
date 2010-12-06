@@ -81,6 +81,9 @@ namespace GearAlert.Web.Reporting {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportingService/GetAllFeeds", ReplyAction="http://tempuri.org/IReportingService/GetAllFeedsResponse")]
         System.Collections.Generic.List<GearAlert.Reporting.Model.Feed> GetAllFeeds();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportingService/GetFeed", ReplyAction="http://tempuri.org/IReportingService/GetFeedResponse")]
+        GearAlert.Reporting.Model.Feed GetFeed(System.Guid feedId);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportingService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IReportingService/GetDataUsingDataContractResponse")]
         GearAlert.Web.Reporting.CompositeType GetDataUsingDataContract(GearAlert.Web.Reporting.CompositeType composite);
     }
@@ -114,6 +117,10 @@ namespace GearAlert.Web.Reporting {
         
         public System.Collections.Generic.List<GearAlert.Reporting.Model.Feed> GetAllFeeds() {
             return base.Channel.GetAllFeeds();
+        }
+        
+        public GearAlert.Reporting.Model.Feed GetFeed(System.Guid feedId) {
+            return base.Channel.GetFeed(feedId);
         }
         
         public GearAlert.Web.Reporting.CompositeType GetDataUsingDataContract(GearAlert.Web.Reporting.CompositeType composite) {

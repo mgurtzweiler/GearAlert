@@ -73,6 +73,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FeedActivatedHandler.cs" />
+    <Compile Include="FeedDeactivatedHandler.cs" />
     <Compile Include="NewAlertRegisteredEventHandler.cs" />
     <Compile Include="NewFeedCreatedEventHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

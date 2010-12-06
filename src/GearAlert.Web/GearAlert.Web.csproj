@@ -42,8 +42,9 @@
     <Reference Include="Ninject">
       <HintPath>..\..\lib\Ninject\Ninject.dll</HintPath>
     </Reference>
-    <Reference Include="Ninject.Web.Mvc">
-      <HintPath>..\..\lib\Ninject.Web.Mvc\Ninject.Web.Mvc.dll</HintPath>
+    <Reference Include="Ninject.Web.Mvc, Version=2.1.0.29, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Ninject\Ninject.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="NServiceBus">
       <HintPath>..\..\lib\NServiceBus\NServiceBus.dll</HintPath>
@@ -79,12 +80,21 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PubsubController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Home\AddNewFeedInput.cs" />
+    <Compile Include="Helpers\ForEachItem.cs" />
+    <Compile Include="Helpers\PubSubHubbubModelBinders.cs" />
+    <Compile Include="Models\Admin\ActivateFeedInput.cs" />
+    <Compile Include="Models\Admin\AddNewFeedInput.cs" />
+    <Compile Include="Models\Admin\CreateNewAlertInput.cs" />
+    <Compile Include="Models\Admin\DeactivateFeedInput.cs" />
+    <Compile Include="Models\Pubsub\HubCallbackInputModel.cs" />
+    <Compile Include="Models\Pubsub\HubChallengeInputModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\Reporting\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -164,8 +174,17 @@
     <None Include="Service References\Search\SearchService3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\NewFeed.cshtml" />
+    <Content Include="Views\Admin\CreatedNewFeed.cshtml" />
+    <Content Include="Views\Admin\ActivatedFeed.cshtml" />
+    <Content Include="Views\Admin\NewAlert.cshtml" />
+    <Content Include="Views\Admin\CreatedNewAlert.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\Home\" />
+    <Folder Include="Views\Pubsub\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>

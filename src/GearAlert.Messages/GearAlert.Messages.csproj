@@ -51,9 +51,12 @@
   <ItemGroup>
     <Compile Include="Commands\ActivateFeedCommand.cs" />
     <Compile Include="Commands\CreateNewFeedCommand.cs" />
+    <Compile Include="Commands\CreateNewSubscriptionCommand.cs" />
+    <Compile Include="Commands\DeactivateFeedCommand.cs" />
     <Compile Include="Commands\RegisterNewAlertCommand.cs" />
-    <Compile Include="Events\FeedActivated.cs" />
-    <Compile Include="Events\INewFeedCreatedEvent.cs" />
+    <Compile Include="Events\FeedActivatedEvent.cs" />
+    <Compile Include="Events\FeedDeactivatedEvent.cs" />
+    <Compile Include="Events\NewFeedCreatedEvent.cs" />
     <Compile Include="Events\NewAlertRegisteredEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

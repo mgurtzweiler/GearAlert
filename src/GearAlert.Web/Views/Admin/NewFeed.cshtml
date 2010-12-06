@@ -1,0 +1,13 @@
+﻿@{
+    View.Title = "NewFeed";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>NewFeed</h2>
+<form action="/admin/CreateNewFeed" method="post">
+<label for="name">Name</label><input type="text" name="name" /><br />
+<label for="url">Url</label><input type="text" name="url" /><br />
+<label for="LandingUrl">Landing Page Url</label><input type="text" name="landingUrl" /><br />
+<input type="submit" />
+</form>
+</div>

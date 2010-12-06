@@ -1,0 +1,25 @@
+﻿@{
+    View.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<div>
+@foreach (var feed in Model) {
+  <dd>@Html.ActionLink("Add New Alert", "NewAlert", new { feedId = feed.Id})</dd>
+  <dl>@feed.Name
+  @if (feed.IsActive) {
+    <form method="post" action="/admin/DeactivateFeed">
+      <input type="hidden" name="FeedId" value="@feed.Id" /><input type="submit" value="Deactivate" />
+    </form>
+  } else {
+    <form method="post" action="/admin/ActivateFeed">
+      <input type="hidden" name="FeedId" value="@feed.Id" /><input type="submit" value="Activate" />
+    </form>
+  }
+  </dl> 
+}
+</div>
+<div>
+@Html.ActionLink("Create New Feed", "NewFeed")
+
